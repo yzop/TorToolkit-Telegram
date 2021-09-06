@@ -312,12 +312,12 @@ class TaskSequence:
         lis = [False,None]
         cbak = partial(self.get_leech_choice_callback,o_sender=e.sender_id,lis=lis,ts=timestamp)
         
-        gtyh = ""
-        sam1 = [68, 89, 78, 79]
-        for i in sam1:
-            gtyh += chr(i)
-        if os.environ.get(gtyh,False):
-            os.environ["TIME_STAT"] = str(time.time())
+        # gtyh = ""
+        # sam1 = [68, 89, 78, 79]
+        # for i in sam1:
+        #     gtyh += chr(i)
+        # if os.environ.get(gtyh,False):
+        #     os.environ["TIME_STAT"] = str(time.time())
 
         e.client.add_event_handler(
             #lambda e: test_callback(e,lis),

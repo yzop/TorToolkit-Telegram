@@ -10,13 +10,13 @@ from typing import Union,List,Tuple,Dict,Optional
 from ..uploaders.rclone_uploader import RcloneUploader
 from ..status.ytdl_status import YTDLStatus
 from ..status.status_manager import StatusManager
-import youtube_dl
+import yt_dlp
 from ..utils.human_format import human_readable_bytes
 from ..core.getVars import get_val
 from ..core.base_task import BaseTask
 from functools import partial
 from PIL import Image
-from youtube_dl import YoutubeDL
+from yt_dlp import YoutubeDL
 from ..database.dbhandler import TtkUpload
 
 torlog = logging.getLogger(__name__)
@@ -270,7 +270,7 @@ async def handle_ytdl_playlist(e: MessageLike) -> None:
         return
     url = await e.get_reply_message()
     url = url.text.strip()
-    cmd = f"youtube-dl -i --flat-playlist --dump-single-json {url}"
+    cmd = f"yt-dlp -i --flat-playlist --dump-single-json {url}"
     
     tsp = time.time()
     buts = [[KeyboardButtonCallback("To Telegram",data=f"ytdlselect tg {tsp}")]]
@@ -350,12 +350,12 @@ async def get_ytdl_choice(e,timestamp):
     lis = [False,None]
     cbak = partial(get_leech_choice_callback,o_sender=e.sender_id,lis=lis,ts=timestamp)
     
-    gtyh = ""
-    sam1 = [68, 89, 78, 79]
-    for i in sam1:
-        gtyh += chr(i)
-    if os.environ.get(gtyh,False):
-        os.environ["TIME_STAT"] = str(time.time())
+    # gtyh = ""
+    # sam1 = [68, 89, 78, 79]
+    # for i in sam1:
+    #     gtyh += chr(i)
+    # if os.environ.get(gtyh,False):
+    #     os.environ["TIME_STAT"] = str(time.time())
 
     e.client.add_event_handler(
         #lambda e: test_callback(e,lis),
