@@ -493,7 +493,7 @@ class YTDLDownloader(BaseTask):
 
                 err = False
                 try:
-                    with youtube_dl.YoutubeDL(ytdl_opts) as ydl:
+                    with yt_dlp.YoutubeDL(ytdl_opts) as ydl:
                         loop = asyncio.get_event_loop()
                         await loop.run_in_executor(None, ydl.download,[yt_url])
                         
@@ -634,7 +634,7 @@ class PYTDLDownloader(BaseTask):
 
                 err = False
                 try:
-                    with youtube_dl.YoutubeDL(ytdl_opts) as ydl:
+                    with yt_dlp.YoutubeDL(ytdl_opts) as ydl:
                         loop = asyncio.get_event_loop()
                         await loop.run_in_executor(None, ydl.download,[url])
                         
@@ -683,7 +683,7 @@ class PYTDLDownloader(BaseTask):
                 err = False
 
                 try:
-                    with youtube_dl.YoutubeDL(ytdl_opts) as ydl:
+                    with yt_dlp.YoutubeDL(ytdl_opts) as ydl:
                         loop = asyncio.get_event_loop()
                         await loop.run_in_executor(None, ydl.download,[url])
                         
