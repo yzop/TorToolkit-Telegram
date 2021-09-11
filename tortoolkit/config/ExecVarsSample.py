@@ -92,7 +92,7 @@ except:
         RCLONE_CONFIG = False
         
         # If set then you can view the downloaded files which are currently on the server
-        ENABLE_WEB_FILES_VIEW = False
+        ENABLE_WEB_FILES_VIEW = True
 
         # Try beta ytdl download if errored turn this off
         ENABLE_BETA_YOUTUBE_DL = True
