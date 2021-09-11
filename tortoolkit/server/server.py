@@ -193,20 +193,15 @@ input[type="submit"]:hover, input[type="submit"]:focus{
 </style>
 </head>
 <body>
-  <!--© Designed and coded by @bipuldey19-Telegram (modded for TTK by AmirrulAndalib)-->
     <header>
       <div class="brand">
         <img
           src="https://telegra.ph/file/339934f8ce1375043127d.jpg"
           alt="logo"
         />
-        <a href="https://t.me/torToolkit"> 
+        <a > 
           <h2 class="name">TorToolkit</h2>
         </a>
-      </div>
-      <div class="social">
-        <a href="https://github.com/yash-dk/TorToolkit-Telegram"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/TorToolkit"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
@@ -532,20 +527,15 @@ section span{
     </style>
   </head>
 <body>
-   <!--© Designed and coded by @bipuldey19-Telegram (modded for TTK by AmirrulAndalib)-->
     <header>
       <div class="brand">
         <img
           src="https://telegra.ph/file/339934f8ce1375043127d.jpg"
           alt="logo"
         />
-        <a href="https://t.me/TorToolkit">
+        <a>
           <h2 class="name">TorToolkit</h2>
         </a>
-      </div>
-      <div class="social">
-        <a href="https://github.com/yash-dk/TorToolkit-Telegram"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/TorToolkit"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
