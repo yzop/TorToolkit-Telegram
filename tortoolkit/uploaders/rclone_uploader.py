@@ -70,6 +70,8 @@ class RcloneUploader(BaseTask):
         is_general = False
         general_drive_name = ""
         dest_base = None
+        index_link = None
+        file_link = None
 
         for i in conf.sections():
             if dest_drive == str(i):
